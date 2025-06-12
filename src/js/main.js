@@ -16,7 +16,6 @@ document.querySelectorAll('.nav-links a').forEach(link =>  {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
@@ -25,11 +24,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 );
 // Add background color to the navbar on scroll
 window.addEventListener('scroll', function() {
-  const header = document.querySelector('header');
-  if(this.window.scrollY > 50) {
-      header.style.backgroundColor = '#000000'
-      header.style.transition = 'background-color 0.3s ease'
-  } else{
-      header.style.backgroundColor = 'transparent'
-  }
-})
+    const header = document.querySelector('header');
+    header.classList.toggle('scrolled', window.scrollY > 50);
+});

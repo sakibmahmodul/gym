@@ -1,92 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="./src/style.css">
-  </head>
-  <body>
-      <!-- Header Section -->
-       <header>
-        <nav>
-          <div class="logo">
-            <!-- Logo -->
-            <a href="/">
-              <img src="./images/logo.png" alt="Gym Logo">
-            </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <!-- logo -->
+      <div class="logo">
+        <a href="/">
+          <img src="./images/logo.png" alt="gym 24 logo" />
+        </a>
+      </div>
+
+      <!-- mobile menu bar -->
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- menu items -->
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="#advantages">Advantages</a>
+        </li>
+        <li>
+          <a href="#membership">Membership </a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#trainers">Trainers</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Free Trial Session With a Trainer</h1>
+      <button class="cta-button">Detailed</button>
+    </div>
+  </section>
+  <!-- Advantages Section -->
+  <section class="advantages" id="advantages">
+    <div class="container">
+      <h2>Reasons to join</h2>
+      <div class="advantages-grid">
+        <!-- box-1 -->
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <img src="./images/icons/icon_line.png" alt="area icon">
           </div>
-          <!-- Mobile Menu -->
-           <div class="nav-toggle" id="navToggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="advantage-content">
+            <h3>25000 sq.m.</h3>
+            <p>A spacious gym for sports – a safe distance between exercise machines</p>
           </div>
-          <!-- Menu Item -->
-          <ul class="nav-links" id="navLinks">
-            <li><a href="#advantages">Advantages</a></li>
-            <li><a href="#membership">Membership</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#trainer">Trainer</a></li>
-          </ul>
-        </nav>
-       </header>
-       <!-- Hero Section -->
-        <section class="hero">
-          <div class="hero-content">
-            <h1>Free Trial Session With a Trainer</h1>
-            <button class="cta-button">Detailed</button>
+        </div>
+        <!-- box-2 -->
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <img src="./images/icons/equipment-icon.png" alt="equipment icon">
           </div>
-        </section>
-        <!-- Advantages Section -->
-         <section class="advantages" id="advantages">
-          <div class="container">
-            <h2>Reasons to join</h2>
-            <div class="advantages-grid">
-              <!-- box-1 -->
-              <div class="advantage-item">
-                <div class="advantage-icon">
-                  <img src="./images/icons/icon_line.png" alt="area icon">
-                </div>
-                <div class="advantage-content">
-                  <h3>25000 sq.m.</h3>
-                  <p>A spacious gym for sports – a safe distance between exercise machines</p>
-                </div>
-              </div>
-              <!-- box-2 -->
-              <div class="advantage-item">
-                <div class="advantage-icon">
-                  <img src="./images/icons/equipment-icon.png" alt="equipment icon">
-                </div>
-                <div class="advantage-content">
-                  <h3>More than 200 equipments</h3>
-                  <p>No ques at the simulator. Premium equipment from LifeStyle, Hammer Strength, TechnoGym</p>
-                </div>
-              </div>
-              <!-- box-3 -->
-              <div class="advantage-item">
-                <div class="advantage-icon">
-                  <img src="./images/icons/zones-icon.png" alt="zones icon">
-                </div>
-                <div class="advantage-content">
-                  <h3>4 Fitness zones</h3>
-                  <p>From Cardio to functional and cycle. Seperate area for boxing and mix martial arts.</p>
-                </div>
-              </div>
-              <!-- box-4 -->
-              <div class="advantage-item">
-                <div class="advantage-icon">
-                  <img src="./images/icons/clock-icon.png" alt="clock icon">
-                </div>
-                <div class="advantage-content">
-                  <h3>Round the clock operation</h3>
-                  <p>The gym is open 24 hours a day, also works on all holidays and weekends</p>
-                </div>
-              </div>
-            </div>
+          <div class="advantage-content">
+            <h3>More than 200 equipments</h3>
+            <p>No ques at the simulator. Premium equipment from LifeStyle, Hammer Strength, TechnoGym</p>
           </div>
-         </section>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+        </div>
+        <!-- box-3 -->
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <img src="./images/icons/zones-icon.png" alt="zones icon">
+          </div>
+          <div class="advantage-content">
+            <h3>4 Fitness zones</h3>
+            <p>From Cardio to functional and cycle. Seperate area for boxing and mix martial arts.</p>
+          </div>
+        </div>
+        <!-- box-4 -->
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <img src="./images/icons/clock-icon.png" alt="clock icon">
+          </div>
+          <div class="advantage-content">
+            <h3>Round the clock operation</h3>
+            <p>The gym is open 24 hours a day, also works on all holidays and weekends</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Membership Section -->
+  <section class="membership" id="membership">
+    <div class="container">
+      <h2>Gym Membership</h2>
+      <div class="membership-grid" id="membershipPlans">
+        <!-- Plans Data comes from Javascript -->
+         
+      </div>
+    </div>
+  </section>
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="./src/js/membership.js"></script>
+</body>
+
 </html>

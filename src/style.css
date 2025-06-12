@@ -20,12 +20,19 @@ html, body {
   width: 100%;
 }
 /* Header Section */
-header{
-  position: fixed;
-  width: 100%;
+header {
   padding: 20px 0;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 nav{
   max-width: 1440px;
@@ -217,5 +224,105 @@ nav{
   }
   .advantage-content p{
     width: 100%;
+  }
+  html{
+    stop-opacity: 80px;
+    scroll-padding-top: 80px;
+  }
+}
+/* Membership Section */
+.membership{
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+.membership h2{
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.membership-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.membership-card{
+    background: #222222;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    transition: all 0.3s ease;
+}
+
+.membership-card:hover{
+    scale: 1.05;
+}
+
+.membership-card h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.membership-card .price{
+    font-size: 36px;
+    color: #FFF000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.membership-card ul{
+    list-style: none;
+    margin-bottom: auto;
+}
+
+.membership-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.membership-card li img{
+    width: 20px;
+    height: 20px;
+}
+
+.membership-card .buy-btn{
+    background-color: #FFFF00;
+    color: #000000;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.membership-card .buy-btn:hover{
+    background-color: #e6e600;
+}
+@media screen and (max-width: 1024px) {
+  .membership-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .membership{
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .membership-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .membership-card h2{
+    font-size: 30px;
+    margin-bottom: 30px;
   }
 }
